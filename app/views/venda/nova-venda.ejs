@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <%- include('../includes/head.ejs') %>
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <%- include('../includes/nav') %>
+        <main class="main-content">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-header">
+                            Formulário de <strong>Venda ou Aluguél</strong>
+                        </div>
+                        <div class="card-body card-block">
+                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                <div class="row form-group">
+                                    <div class="col col-md-3">
+                                        <label for="text-input" class=" form-control-label">Propietário</label>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <select name="nome" id="nome" class="select-picker form-control" data-live-search="true">
+                                            <option selected disabled>Selecione um cliente</option>
+                                            <option> Angelica Rodrigues</option>
+                                            <option> Carlos Santos</option>
+                                            <option> Debora Goettems</option>
+                                            <option> Ricardo Goettems</option>
+                                            <option> Vitor Régis</option>
+                                        </select>
+                                        <small class="form-text text-muted">Buscaremos no banco de clientes.</small>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <%- include('../includes/footer') %>
+            </div>
+        </main>
+    </div>
+</body>
+<%- include('../includes/end') %>
+
+<script>
+    const btnNewDetail = $('#new_detail');
+    let inputNumberOfDetails = document.querySelector('#number_details');
+    let numberOfDetails = 0;
+    let removeDetailBtns;
+
+    btnNewDetail.click(() => {
+        $('.property_detail').children('.remove_detail').remove();
+
+        numberOfDetails += 1;
+        inputNumberOfDetails.value = numberOfDetails;
+        $('#details_list').append(
+            `<div class="property_detail animated fadeIn">
+							<input type="text" class="form-control detail_text " placeholder="Detalhe" name="nomedetalhe${numberOfDetails}">
+							<button type="button" onclick="removeDetail(this) "class="remove_detail"><i class="fa fa-remove"></i></button>
+							<div class="number_picker">
+								<input type="text" placeholder="Valor" class="form-control" name="valordetalhe${numberOfDetails}">
+							</div>
+					</div>`
+        );
+    });
+
+    const removeDetail = (btn) => {
+        $(btn).parent().remove();
+        $('.property_detail').last().append(
+            '<button type="button" onclick="removeDetail(this) "class="remove_detail"><i class="fa fa-remove"></i></button>'
+        );
+        numberOfDetails -= 1;
+        inputNumberOfDetails.value = numberOfDetails;
+    }
+</script>
+
+</html>

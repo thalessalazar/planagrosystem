@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <%- include('../includes/head.ejs') %>
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <%- include('../includes/nav')%>
+
+        <main class="main-content">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="title-wrap">
+                                <h2 class="title-5 p-b-30">
+                                    <i class="fa fa-database"></i> Banco de Propiedades
+                                </h2>
+                            </div>
+                            <div class="table-data__tool">
+                                <div class="table-data__tool-left">
+                                    <form>
+                                        <div class="filter-input--wrap">
+                                            <input placeholder="Código" class="custom-input--light custom-input--w150"
+                                                name="codigo" />
+                                        </div>
+                                        <div class="filter-input--wrap">
+                                            <input placeholder="Propietário" class="custom-input--light custom-input--w300"
+                                                name="propietario" />
+                                        </div>
+                                        <div class="rs-select2--light rs-select2--md">
+                                            <select class="js-select2" name="tipo">
+                                                <option disabled selected>Tipo</option>
+                                                <option>Venda</option>
+                                                <option>Aluguél</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                        <div class="rs-select2--light rs-select2--sm">
+                                            <select class="js-select2" name="property">
+                                                <option selected disabled>Status</option>
+                                                <option value="">Ativo</option>
+                                                <option value="">Inativo</option>
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+
+                                        <button type="submit" class="custom-btn-filter">
+                                            <i class="zmdi zmdi-filter-list"></i>Filtrar</button>
+                                    </form>
+                                </div>
+
+
+                                <div class="table-data__tool-right">
+
+                                    <a role="button" class="custom-btn custom-btn-icon custom-btn--main custom-btn--small">
+                                        <i class="zmdi zmdi-plus"></i>CADASTRAR PROPIEDADE</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row card-list">
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <img class="card-img-top" src="https://img.olx.com.br/images/28/283816026696759.jpg"
+                                    alt="DNA">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-2">Casa no Jardim do Castelo</h4>
+                                    <p class="card-subtitle">Propietário: Elias Pinto</p>
+                                    <a href="propiedades/informacoes" class="btn btn-sm btn-block btn-outline-primary">
+                                        Detalhes
+                                    </a>
+                                    <div class="card-text">
+                                        <span class="badge badge-primary mt-3">Aluguél</span>
+                                        <span class="badge badge-warning mt-3">Em espera</span>
+                                        <p class="card-cod"> cód. 9494 </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <img class="card-img-top" src="https://odis.homeaway.com/odis/listing/cd89e2f2-f3ed-4f5a-89c4-f2cd1d7ae14a.c10.jpg"
+                                    alt="DNA">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-2">Chacará em Serra-Minha Aceguá</h4>
+                                    <p class="card-subtitle">Propietário: Arlete Silva</p>
+                                    <a href="propiedades/informacoes" class="btn btn-sm btn-block btn-outline-primary">
+                                        Detalhes
+                                    </a>
+                                    <div class="card-text">
+                                        <span class="badge badge-primary mt-3">Venda</span>
+                                        <span class="badge badge-success mt-3">Ativo</span>
+                                        <p class="card-cod"> cód. 9494 </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <img class="card-img-top" src="https://odis.homeaway.com/odis/listing/756fb2a8-13b3-407b-bde3-fdc8fed93343.c10.jpg"
+                                    alt="DNA">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-2">Chacará em Serra-Minha Aceguá</h4>
+                                    <p class="card-subtitle">Propietário: Fernando Farias</p>
+                                    <a href="propiedades/informacoes" class="btn btn-sm btn-block btn-outline-primary">
+                                        Detalhes
+                                    </a>
+                                    <div class="card-text">
+                                        <span class="badge badge-primary mt-3">Venda</span>
+                                        <span class="badge badge-danger mt-3">Inativo</span>
+                                        <p class="card-cod"> cód. 9494 </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%- include('../includes/footer.ejs')%>
+            </div>
+        </main>
+    </div>
+</body>
+<%- include('../includes/end') %>
+
+</html>

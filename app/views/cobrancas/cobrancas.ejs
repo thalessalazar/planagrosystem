@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <%- include('../includes/head') %>
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <%- include('../includes/nav') %>
+
+        <!-- MAIN CONTENT-->
+        <main class="main-content">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- DATA TABLE -->
+                            <h3 class="title-5 m-b-35">Banco de Cobranças</h3>
+                            <div class="table-data__tool">
+                                <div class="table-data__tool-left">
+                                    <form>
+                                        <div class="filter-input--wrap">
+                                            <input placeholder="Nome" class="custom-input--light custom-input--w300"
+                                                name="nome" />
+                                        </div>
+                                        <div class="filter-input--wrap">
+                                            <input placeholder="Propiedade" class="custom-input--light custom-input--w300"
+                                                name="nome" />
+                                        </div>
+                                        <button class="custom-btn-filter" type="submit">
+                                            <i class="zmdi zmdi-filter-list"></i>Filtrar</button>
+                                    </form>
+                                </div>
+                                <div class="table-data__tool-right">
+                                    <a role="button" href="/clientes/novo"class="custom-btn custom-btn-icon custom-btn--main custom-btn--small">
+                                        <i class="zmdi zmdi-plus"></i>NOVA COBRANÇA</a>
+                                </div>
+                            </div>
+                            <div class="table-responsive table-responsive-data2">
+                                <table id="example" class="table table-data2">
+                                    <thead>
+                                        <tr>
+                                            <th>cliente</th>
+                                            <th>propiedade</th>
+                                            <th>valor</th>
+                                            <th>tipo</th>
+                                            <th>status</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="tr-shadow">
+                                            <td>Vitor Régis</td>
+                                            <td>
+                                                <span class="block-email">Chacará Boa-Vista perto de Aceguá</span>
+                                            </td>
+                                            <td class="desc">R$ 280,00</td>
+                                            <td> Mensalidade aluguél</td>
+                                            <td class="status--denied"> Pendente</td>
+                                            <td>
+                                                <div class="table-data-feature">
+                                                    <button class="item" data-toggle="tooltip" data-placement="top"
+                                                        title="Delete">
+                                                        <i class="zmdi zmdi-delete"></i>
+                                                    </button>
+                                                    <a href="/cobrancas/informacoes">
+                                                        <button class="item" data-toggle="tooltip" data-placement="top"
+                                                            title="Detalhes">
+                                                            <i class="zmdi zmdi-more"></i>
+                                                    </a>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%- include('../includes/footer') %>
+            </div>
+        </main>
+    </div>
+</body>
+<%- include('../includes/end') %>
+
+</html>

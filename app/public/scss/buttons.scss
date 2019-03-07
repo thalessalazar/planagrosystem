@@ -1,0 +1,186 @@
+ /* ----- Buttons----- */
+ @mixin custom-btn {
+   padding: 0 35px;
+   line-height: 45px;
+   text-transform: uppercase;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   -webkit-transition: all 0.3s ease;
+   -o-transition: all 0.3s ease;
+   -moz-transition: all 0.3s ease;
+   transition: all 0.3s ease;
+   cursor: pointer;
+   color: #fff;
+ }
+
+ .custom-btn--blue {
+   @include custom-btn;
+   background: $secondary-color;
+
+   &:hover {
+     background: darken($secondary-color, 5%);
+   }
+ }
+
+ .custom-btn--green {
+  @include custom-btn;
+  background: rgb(70, 199, 70);
+
+  &:hover {
+    background: darken(rgb(70, 199, 70), 5%);
+  }
+}
+
+ .custom-btn--blue2 {
+   @include custom-btn;
+   background: #00aced;
+
+   &:hover {
+     background: #00a2e3;
+   }
+ }
+
+ .custom-btn--block {
+   display: block;
+   width: 100%;
+ }
+
+ .custom-btn-icon i {
+   vertical-align: baseline;
+   margin-right: 5px;
+ }
+
+ .custom-btn--main {
+   @include custom-btn;
+   background: $main-color;
+
+   &:hover {
+     background: darken($main-color, 10%);
+   }
+
+   a:hover {
+     color: #fafafa;
+   }
+
+   &.active {
+     background: darken($main-color, 15%);
+     box-shadow: 1px 1px 5px #0430085b;
+   }
+ }
+
+ .btn-group .custom-btn--main {
+   background: rgba(255, 255, 255, 0);
+   border: 1px solid $main-color;
+   color: $main-color;
+   outline: none !important;
+
+   &:hover,
+   &:active {
+     background: darken($main-color, 10%);
+     color: rgb(231, 231, 231);
+     outline: none !important;
+   }
+ }
+
+ .custom-btn-plus {
+   position: absolute;
+   height: 45px;
+   width: 45px;
+   background: $main-color;
+   -webkit-border-radius: 100%;
+   -moz-border-radius: 100%;
+   border-radius: 100%;
+   -webkit-transition: all 0.3s ease;
+   -o-transition: all 0.3s ease;
+   -moz-transition: all 0.3s ease;
+   transition: all 0.3s ease;
+   bottom: -22.5px;
+   right: 45px;
+   z-index: 3;
+
+   i {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
+     -o-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+     font-size: 15px;
+     font-weight: 500;
+     color: #fff;
+   }
+
+   &:hover {
+     background: darken($main-color, 10%);
+   }
+ }
+
+ .custom-btn-load {
+   background: #808080;
+   padding: 0 40px;
+   font-size: 15px;
+   color: #fff;
+
+   &:hover {
+     background: #767676;
+   }
+ }
+
+ .custom-btn-filter {
+   font-size: 14px;
+   color: #808080;
+   background: #fff;
+   -webkit-border-radius: 3px;
+   -moz-border-radius: 3px;
+   border-radius: 3px;
+   -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
+   -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
+   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
+   padding: 0 15px;
+   line-height: 40px;
+   text-transform: capitalize;
+ }
+
+
+ .check-in {
+   float: right;
+   position: absolute;
+   left: 90%;
+   z-index: 2;
+   height: 36px;
+   width: 36px;
+   border: 1px solid darken($main-color, 15%);
+   -webkit-border-radius: 100%;
+   -moz-border-radius: 100%;
+   border-radius: 100%;
+   -webkit-transition: all 0.3s ease;
+   -o-transition: all 0.3s ease;
+   -moz-transition: all 0.3s ease;
+   transition: all 0.3s ease;
+
+   i {
+     font-size: 15px;
+     font-weight: normal;
+     color: darken($main-color, 15%);
+   }
+
+   &:hover {
+     background-color: darken($main-color, 15%);
+
+     i {
+       color: #fff;
+     }
+   }
+ }
+
+ .custom-btn-filter i {
+   margin-right: 5px;
+ }
+
+ .custom-btn--small {
+   padding: 0 20px;
+   font-size: 14px;
+ }

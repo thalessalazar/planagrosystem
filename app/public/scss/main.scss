@@ -1,0 +1,38 @@
+/* -----main default----- */
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ----- //main default ----- */
+
+/* ----- colors ----- */
+$main-color: #601416;
+$secondary-color: #360b0c;
+/* ----- //colors ----- */
+
+/* ----- Components ----- */
+
+@import 'typo',
+'pagewrapper',
+'pageloader',
+'header',
+'card',
+'tables',
+'form',
+'switch',
+'buttons',
+'alert',
+'breadcrumb',
+'trumps',
+'chat',
+'normalize',
+'login',
+'footer',
+'register',
+'tasklist';
+/* ----- //Components ----- */

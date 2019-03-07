@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <%- include('../includes/head.ejs') %>
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <%- include('../includes/nav') %>
+        <!-- MAIN CONTENT-->
+        <div class="main-content">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="row m-b-20">
+                        <div class="col-md-12">
+                            <div class="title-wrap">
+                                <h2 class="title-1">
+                                    <i class="fa fa-tasks"></i> Minha Conta
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="mx-auto d-block text-center">
+                                                <img class="rounded-circle img-fluid img-120 mx-auto d-block" src="../images/icon/avatar-01.jpg"
+                                                    alt="Foto do Aluno">
+                                                <h5 class="text-sm-center mt-2 mb-1">Débora Goettems</h5>
+                                                <div class="location text-sm-center">Corretora de Vendas</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-7">
+                                            <form id="form-dados" class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Nome:</label>
+                                                        <input type="text" class="form-control" value="Débora Goettems"
+                                                            readonly="true" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Telefone</label>
+                                                        <input type="text" class="form-control" value="(53)9-9919-7942"
+                                                            readonly />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Email:</label>
+                                                        <input type="text" class="form-control" value="deboragoettems@gmail.com"
+                                                            readonly />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="form-group m-b-0">
+                                                        <label>Idade:</label>
+                                                        <input type="text" class="form-control" value="00"
+                                                            readonly />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 d-flex p-t-20">
+                                                    <button type="button" class="custom-btn--main custom-btn-small editBtn">Editar
+                                                    </button>
+
+                                                    <button type="submit" class="custom-btn--green custom-btn--small sendBtn">
+                                                        <i class="fa fa-paper-plane"></i>
+                                                    </button>
+
+                                                    <button id="backBtn" style="background-color: rgb(228, 55, 55); color: #fff"
+                                                        type="button" class="custom-btn--small sendBtn m-l-10">
+                                                        <i class="fa fa-times"> </i>
+                                                    </button>
+
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="m-b-10">Histórico de Vendas</h4>
+                            <div class="table-responsive m-b-40" style="max-height: 260px;">
+                                <table class="table table-borderless table-data3">
+                                    <thead>
+                                        <tr>
+                                            <th>Atividade</th>
+                                            <th>Nome</th>
+                                            <th>Data</th>
+                                            <th>Pontuação</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Jogo</td>
+                                            <td>Monte as sequências</td>
+                                            <td>22/03/04 16:00</td>
+                                            <td class="denied">23 pontos</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jogo</td>
+                                            <td>Destrua as pontuações</td>
+                                            <td>22/03/04 16:00</td>
+                                            <td class="process">100 Pontos</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Questionário</td>
+                                            <td>Quizz RNA e DNA</td>
+                                            <td>22/03/04 16:00</td>
+                                            <td class="denied"> 32/40</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Questionário</td>
+                                            <td>Quizz RNA e DNA</td>
+                                            <td>22/03/04 16:00</td>
+                                            <td class="denied"> 32/40</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Questionário</td>
+                                            <td>Quizz RNA e DNA</td>
+                                            <td>22/03/04 16:00</td>
+                                            <td class="denied"> 32/40</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%- include('../includes/footer') %>
+            </div>
+            </main>
+        </div>
+</body>
+<%- include('../includes/end') %>
+<script>
+    $('.sendBtn').hide();
+    $('#form-dados .editBtn').click(function () {
+        $('.editBtn').hide();
+        $('.sendBtn').show();
+        $('#form-dados input').each(function () {
+            $(this).removeAttr("readonly");
+        })
+    });
+    $('#form-dados #backBtn').click(function () {
+        $('.editBtn').show();
+        $('.sendBtn').hide();
+        $('#form-dados input').each(function () {
+            $(this).attr("readonly", true);
+        })
+    });
+</script>
+
+</html>

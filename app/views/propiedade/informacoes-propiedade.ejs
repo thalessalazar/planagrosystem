@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <%- include('../includes/head.ejs') %>
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <%- include('../includes/nav') %>
+        <!-- MAIN CONTENT-->
+        <div class="main-content">
+            <div class="section__content section__content--p30">
+                <div class="container-fluid">
+                    <div class="row m-b-20">
+                        <div class="col-md-12">
+                            <div class="title-wrap">
+                                <div>
+                                    <h2 class="title-5 text-center ml-2 d-in-block">
+                                        <i class="fa fa-warehouse"></i> Chacará Boa-Vista em Aceguá</h2>
+                                </div>
+                                <button class="custom-btn custom-btn-icon custom-btn--main m-b-5">
+                                    <a href="controle-alunos.html">
+                                        <i class="fa fa-back"></i>Voltar para clientes</a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert">
+                                Essa propiedade está inativa até <b>02/03/2019</b> por causa do interesse de <a href="#" class="alert-link">Vitor Régis</a>.
+                                Reative a propiedade <a href="#" class="alert-link">clicando aqui</a>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <button data-toggle="collapse" data-target="#informacoesProp" aria-expanded="false"
+                                        aria-controls="#informacoesProp">
+                                        <h3 class="title-5" id="headingInformacoesProp">
+                                            Informações
+                                            <i class="fa"></i>
+                                        </h3>
+                                    </button>
+                                </div>
+                                <div class="card-body collapse" id="informacoesProp" aria-labelledby="headingInformacoesProp">
+                                    <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+
+                                        <div class="row form-group">
+                                            <div class="col col-md-3">
+                                                <label for="text-input" class=" form-control-label">Propietário</label>
+                                            </div>
+                                            <div class="col-12 col-md-9">
+                                                <select name="nome" id="nome" class="select-picker form-control"
+                                                    data-live-search="true">
+                                                    <option selected disabled>Selecione um cliente</option>
+                                                    <option> Angelica Rodrigues</option>
+                                                    <option> Carlos Santos</option>
+                                                    <option> Debora Goettems</option>
+                                                    <option> Ricardo Goettems</option>
+                                                    <option> Vitor Régis</option>
+                                                </select>
+                                                <small class="form-text text-muted">Buscaremos no banco de clientes.</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <div class="col col-md-3">
+                                                <label for="text-input" class=" form-control-label">Título</label>
+                                            </div>
+                                            <div class="col-12 col-md-9">
+                                                <input type="text" id="text-input" name="text-input" placeholder=""
+                                                    class="form-control">
+                                                <small class="form-text text-muted">Algo que resuma e atraia possíveis
+                                                    interessados.</small>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3">
+                                                <label for="textarea-input" class=" form-control-label">Descrição</label>
+                                            </div>
+                                            <div class="col-12 col-md-9">
+                                                <textarea name="textarea-input" id="textarea-input" rows="9"
+                                                    placeholder="" class="form-control"></textarea>
+                                                <small class="form-text text-muted">Informações extras e uma propaganda
+                                                    sobre a
+                                                    propiedade.</small>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col col-md-3">
+                                                <label for="select" class=" form-control-label">Tipo</label>
+                                            </div>
+                                            <div class="col-12 col-md-9">
+                                                <select class="form-control" name="tipo" id="tipo">
+                                                    <option selected disabled>Selecione um tipo</option>
+                                                    <option value="1">Aluguél</option>
+                                                    <option value="2">Venda</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <div class="col col-md-3">
+                                                <label for="zona" class=" form-control-label">Zona</label>
+                                            </div>
+                                            <div class="col-12 col-md-9">
+                                                <select name="zona" id="zona" class="form-control">
+                                                    <option selected disabled>Selecione uma zona</option>
+                                                    <option value="1">Rural</option>
+                                                    <option value="2">Urbana</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group detalhes">
+                                            <div class="col-12 col-md-3">
+                                                <label for="zona" class=" form-control-label">Detalhes</label>
+                                            </div>
+                                            <div class="col-12 col-md-7 detalhes">
+                                                <div class="row">
+                                                    <div class="col-6 col-md-4 zona-urbana mb-2">
+                                                        <input type="text" id="text-input" name="text-input"
+                                                            placeholder="N. Dormitórios" class="form-control">
+                                                    </div>
+                                                    <div class="col-6 col-md-4 zona-urbana mb-2">
+                                                        <input type="text" id="text-input" name="text-input"
+                                                            placeholder="N. Banheiros" class="form-control">
+                                                    </div>
+                                                    <div class="col-6 col-md-4 zona-urbana mb-2">
+                                                        <input type="text" id="text-input" name="text-input"
+                                                            placeholder="N. Suítes" class="form-control">
+                                                    </div>
+                                                    <div class="col-6 col-md-4 zona-urbana mb-2">
+                                                        <input type="text" id="text-input" name="text-input"
+                                                            placeholder="N. Cozinhas" class="form-control">
+                                                    </div>
+                                                    <div class="col-6 col-md-4 zona-urbana mb-2">
+                                                        <input type="text" id="text-input" name="text-input"
+                                                            placeholder="Tem pátio?" class="form-control">
+                                                    </div>
+                                                    <div class="col-6 col-md-4 zona-urbana mb-2">
+                                                        <input type="text" id="text-input" name="text-input"
+                                                            placeholder="Tem piscina?" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3> Outros dados ...</h3>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <button data-toggle="collapse" data-target="#imagensProp" aria-expanded="false"
+                                        aria-controls="#imagensProp">
+                                        <h3 class="title-5" id="headingImagensProp">
+                                            Imagens
+                                            <i class="fa"></i>
+                                        </h3>
+                                    </button>
+                                </div>
+                                <div class="card-body collapse" id="imagensProp" aria-labelledby="headingImagensProp">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="https://img.olx.com.br/images/28/283816026696759.jpg" alt=""
+                                                class="img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <button data-toggle="collapse" data-target="#documentosProp" aria-expanded="false"
+                                        aria-controls="#documentosProp">
+                                        <h3 class="title-5" id="headingdocumentosProp">
+                                            Documentos
+                                            <i class="fa"></i>
+                                        </h3>
+                                    </button>
+                                </div>
+                                <div class="card-body collapse" id="documentosProp" aria-labelledby="headingdocumentosProp">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <strong class="card-title text-center">
+                                        <i class="fa fa-chart"></i> Interessados</strong>
+                                    <button class="" data-toggle="modal" data-target="#novo-interessado">
+                                        <i class="zmdi zmdi-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="user-data pt-1">
+                                        <div class="table-responsive table-data h-auto">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td>Cliente</td>
+
+                                                        <td>Telefone</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <p>Vitor Régis</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <p class="desc">(53) 9-9919-7942</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="more">
+                                                                <button class="item" type="submit">
+                                                                    <i class="zmdi zmdi-more"></i>
+                                                                </button>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header d-flex justify-content-between">
+                                    <strong class="card-title text-center">
+                                        <i class="fa fa-chart"></i> Visitas</strong>
+                                    <button class="" data-toggle="modal" data-target="#nova-visita">
+                                        <i class="zmdi zmdi-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="user-data pt-1">
+                                        <div class="table-responsive table-data h-auto">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <td>Cliente</td>
+
+                                                        <td>Data</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>Vitor Régis</h6>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                <h6>28/02/2019 às 15:30</h6>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span class="more">
+                                                                <button class="item" type="submit">
+                                                                    <i class="zmdi zmdi-more"></i>
+                                                                </button>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%- include('../includes/footer') %>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../includes/modals/nova-visita') %>
+    <%- include('../includes/modals/novo-interessado') %>
+</body>
+<%- include('../includes/end') %>
+<script>
+    $('.sendBtn').hide();
+    $('#form-dados .editBtn').click(function () {
+        $('.editBtn').hide();
+        $('.sendBtn').show();
+        $('#form-dados input').each(function () {
+            $(this).removeAttr("readonly");
+        })
+    });
+    $('#form-dados #backBtn').click(function () {
+        $('.editBtn').show();
+        $('.sendBtn').hide();
+        $('#form-dados input').each(function () {
+            $(this).attr("readonly", true);
+        })
+    });
+</script>
+
+</html>
